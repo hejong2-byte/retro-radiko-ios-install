@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSEG high resolution segment preview</title>
+<style>
+@font-face {
+  font-family: "DSEG7Classic";
+  src: url("./DSEG7Classic-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "DSEG7ClassicMini";
+  src: url("./DSEG7ClassicMini-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: #050606;
+  color: #eaffff;
+  font-family: Arial, sans-serif;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 34px 38px 48px;
+}
+.title {
+  font-size: 34px;
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+.note {
+  color: #9fe6ed;
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+.warn {
+  color: #ffe64c;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 36px;
+}
+.section-title {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 0 0 14px;
+}
+.module {
+  width: 1050px;
+  height: 260px;
+  background: #000;
+  border: 5px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 58px;
+  box-shadow: inset 0 0 0 2px #050505;
+}
+.red-display {
+  font-family: "DSEG7Classic", monospace;
+  font-size: 152px;
+  line-height: 1;
+  letter-spacing: .03em;
+  color: #ff1711;
+  text-shadow:
+    0 0 2px #ff120a,
+    0 0 8px rgba(255, 0, 0, .75),
+    0 0 18px rgba(255, 0, 0, .45);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+.app-panel {
+  width: 1110px;
+  height: 212px;
+  border: 2px solid #00cce7;
+  background: #00090a;
+  display: grid;
+  grid-template-columns: 138px 1fr 160px;
+  align-items: center;
+  padding: 0 26px;
+  margin-bottom: 42px;
+}
+.badge {
+  width: 102px;
+  height: 60px;
+  border: 2px solid #ffe128;
+  border-radius: 6px;
+  color: #ffe128;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+.cyan-display {
+  font-family: "DSEG7Classic", monospace;
+  font-size: 118px;
+  line-height: 1;
+  letter-spacing: .02em;
+  color: #eaffff;
+  text-align: center;
+  text-shadow:
+    0 0 1px #eaffff,
+    0 0 8px rgba(160, 255, 255, .30);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+.unit {
+  color: #37e6ff;
+  font-size: 42px;
+  font-weight: 900;
+  justify-self: end;
+}
+.checks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  width: 1110px;
+}
+.check {
+  height: 128px;
+  border: 1px solid rgba(0, 205, 230, .7);
+  background: #001113;
+  padding: 12px;
+  overflow: hidden;
+}
+.check-label {
+  color: #9fe6ed;
+  font-size: 15px;
+  font-weight: 900;
+}
+.check-number {
+  font-family: "DSEG7Classic", monospace;
+  color: #eaffff;
+  font-size: 66px;
+  letter-spacing: .02em;
+  line-height: 1;
+  margin-top: 18px;
+  text-align: center;
+  text-shadow: 0 0 7px rgba(160, 255, 255, .28);
+  -webkit-font-smoothing: antialiased;
+}
+.mini-title { margin-top: 42px; }
+.mini {
+  font-family: "DSEG7ClassicMini", monospace;
+}
+</style>
+</head>
+<body>
+<main>
+  <h1 class="title">DSEG high-resolution segment preview</h1>
+  <p class="note">고해상도 7-segment 폰트 기반. 손으로 그린 막대 아님.</p>
+  <p class="warn">프리뷰 전용. 앱 코드/IPA 변경 없음.</p>
+
+  <h2 class="section-title">1. Reference-like red LED check</h2>
+  <div class="module"><div class="red-display">88:88.8</div></div>
+
+  <h2 class="section-title">2. Retro Radiko cyan size check</h2>
+  <div class="app-panel">
+    <div class="badge">AM</div>
+    <div class="cyan-display">1422</div>
+    <div class="unit">KHz</div>
+  </div>
+
+  <h2 class="section-title">3. Frequency checks</h2>
+  <div class="checks">
+    <div class="check"><div class="check-label">1062</div><div class="check-number">1062</div></div>
+    <div class="check"><div class="check-label">1242</div><div class="check-number">1242</div></div>
+    <div class="check"><div class="check-label">80.0</div><div class="check-number">80.0</div></div>
+    <div class="check"><div class="check-label">104.5</div><div class="check-number">104.5</div></div>
+  </div>
+
+  <h2 class="section-title mini-title">4. MINI variant check</h2>
+  <div class="module"><div class="red-display mini">88:88.8</div></div>
+</main>
+</body>
+</html>
