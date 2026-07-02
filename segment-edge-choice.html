@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Retro Radiko Segment Edge Choice</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #000708;
+      --panel: #001112;
+      --line: rgba(0, 220, 245, .58);
+      --text: #e8ffff;
+      --sub: #a3dadd;
+      --cyan: #2ee5ff;
+      --yellow: #ffe129;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 34% 0%, #062326 0, var(--bg) 44%, #000 100%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+    main {
+      width: min(100%, 1040px);
+      margin: 0 auto;
+      padding: max(18px, env(safe-area-inset-top)) 12px 34px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 7vw, 42px);
+      line-height: 1.05;
+    }
+    p {
+      margin: 0 0 11px;
+      color: var(--sub);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .notice {
+      margin: 14px 0 16px;
+      padding: 11px 12px;
+      border: 1px solid rgba(255, 225, 41, .48);
+      border-radius: 8px;
+      background: rgba(255, 225, 41, .08);
+      color: #fff3a6;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .preview {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #000;
+      box-shadow: 0 0 24px rgba(0, 220, 245, .14);
+    }
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .choice {
+      min-height: 98px;
+      padding: 13px 11px;
+      border: 1px solid rgba(0, 220, 245, .38);
+      border-radius: 8px;
+      background: rgba(0, 16, 18, .88);
+    }
+    .choice b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--cyan);
+      font-size: 22px;
+    }
+    .choice span {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.38;
+    }
+    .meta {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(0, 220, 245, .22);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #87cbd0;
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 560px) {
+      main { padding-left: 9px; padding-right: 9px; }
+      .choices { grid-template-columns: 1fr; }
+      .choice { min-height: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Segment Edge Choice</h1>
+    <p>This is only a review preview. No IPA or app build has been published from this page.</p>
+    <p>Locked: digit slot 46x73, spacing 5, dot slot 11x73, group tilt c=-0.16.</p>
+    <div class="notice">Choose A, B, or C only after checking 1422 and the bottom test frequencies.</div>
+    <a href="segment-edge-locked-approval.png">
+      <img class="preview" src="segment-edge-locked-approval.png" alt="Segment edge A B C preview">
+    </a>
+    <section class="choices" aria-label="Choices">
+      <div class="choice"><b>A current</b><span>Baseline pointed end shape. No edge redesign.</span></div>
+      <div class="choice"><b>B miter</b><span>Same size, thickness, and tilt. Flatter chamfered LED-style ends.</span></div>
+      <div class="choice"><b>C miter + ghost</b><span>B plus stronger inactive 8-outline, so 1 and 4 do not look too small.</span></div>
+    </section>
+    <div class="meta">
+      Image: segment-edge-locked-approval.png<br>
+      App code/build: not applied from this preview.
+    </div>
+  </main>
+</body>
+</html>
