@@ -2,8 +2,8 @@
 
 Public install artifacts only. The application source stays in the private repository.
 
-- Build: 28597252022
-- Commit: f7a0b88
+- Build: 28630500931
+- Commit: 2dcb340
 - IPA: `RetroRadiko-unsigned.ipa`
 - Install page: `install.html`
 
