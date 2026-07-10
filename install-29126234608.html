@@ -1,31 +1,58 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Radiko HJ iOS Install</title>
+  <title>Radiko HJ SideStore Install</title>
   <style>
     :root { color-scheme: dark; }
     body { margin:0; min-height:100vh; display:grid; place-items:center; background:#05080a; color:#e9f8ff; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    main { width:min(92vw,520px); padding:28px 22px; text-align:center; }
-    h1 { margin:0 0 8px; font-size:30px; }
-    p { margin:10px 0; color:#9fd8ee; line-height:1.5; font-size:16px; }
-    .meta { color:#7fb8cc; font-size:14px; }
-    .qr { width:min(74vw,320px); image-rendering:crisp-edges; margin:18px auto; display:block; border:10px solid #fff; background:#fff; border-radius:8px; }
-    .button { display:block; margin:14px auto 0; padding:16px 18px; border-radius:14px; background:#16c8f5; color:#001018; text-decoration:none; font-weight:800; font-size:18px; }
+    main { width:min(94vw,540px); padding:28px 20px 36px; text-align:center; }
+    h1 { margin:0 0 8px; font-size:28px; }
+    p { margin:10px 0; color:#9fd8ee; line-height:1.55; font-size:15px; }
+    .meta { color:#7fb8cc; font-size:13px; }
+    .warn { color:#ffd27a; background:#1a1408; border:1px solid #5a4318; border-radius:10px; padding:12px 14px; text-align:left; }
+    .steps { text-align:left; color:#cfefff; background:#0a1418; border:1px solid #1b3a44; border-radius:10px; padding:12px 14px 12px 32px; margin:14px 0; }
+    .steps li { margin:6px 0; }
+    .qr { width:min(78vw,340px); image-rendering:pixelated; margin:16px auto; display:block; border:12px solid #fff; background:#fff; border-radius:8px; }
+    .button { display:block; margin:12px auto 0; padding:16px 18px; border-radius:14px; background:#16c8f5; color:#001018; text-decoration:none; font-weight:800; font-size:17px; }
     .secondary { background:#10242b; color:#9feeff; border:1px solid #164654; }
-    code { word-break:break-all; color:#7ff0ff; }
+    .tertiary { background:#1a1a12; color:#ffe9a8; border:1px solid #5a4a18; }
+    code { word-break:break-all; color:#7ff0ff; font-size:12px; }
   </style>
 </head>
 <body>
   <main>
     <h1>Radiko HJ</h1>
-    <p>SideStore direct install.</p>
-    <p class="meta">Build 29126234608 / commit 1b4905c / generated 2026-07-11 06:59:42 +0900</p>
-    <img class="qr" src="qr-install.png" alt="SideStore install QR">
+    <p class="meta">Build 29126234608 / source 1b4905c / 2026-07-11 07:02:53 +0900</p>
+
+    <div class="warn">
+      <strong>QR이 안 될 때</strong><br>
+      iPhone 카메라로 <code>sidestore://</code> QR을 찍으면 SideStore가 안 뜨는 경우가 많습니다.
+      아래 <strong>Safari에서 이 페이지를 연 다음</strong> 파란 버튼을 누르세요.
+    </div>
+
+    <ol class="steps">
+      <li>iPhone <strong>Safari</strong>로 이 페이지 열기</li>
+      <li>SideStore 앱이 설치되어 있는지 확인</li>
+      <li>아래 <strong>Install with SideStore</strong> 버튼 탭</li>
+      <li>SideStore가 열리면 설치 진행</li>
+      <li>실패하면 <strong>Install (jsDelivr mirror)</strong> 또는 IPA 다운로드 후 SideStore에서 직접 설치</li>
+    </ol>
+
+    <p class="meta">설치 페이지 QR (Safari 열림 · 권장)</p>
+    <img class="qr" src="qr-install-page-29126234608.png" alt="Open install page QR">
+
     <a class="button" href="sidestore://install?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhejong2-byte%2Fretro-radiko-ios-install%2F11e45581c759955aeb0967d3d0b2b2967ea9ed35%2FRetroRadiko-29126234608.ipa">Install with SideStore</a>
-    <a class="button secondary" href="https://raw.githubusercontent.com/hejong2-byte/retro-radiko-ios-install/11e45581c759955aeb0967d3d0b2b2967ea9ed35/RetroRadiko-29126234608.ipa">Download IPA</a>
-    <p class="meta">Direct URL:<br><code>sidestore://install?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhejong2-byte%2Fretro-radiko-ios-install%2F11e45581c759955aeb0967d3d0b2b2967ea9ed35%2FRetroRadiko-29126234608.ipa</code></p>
+    <a class="button secondary" href="sidestore://install?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhejong2-byte%2Fretro-radiko-ios-install%2Fmain%2FRetroRadiko-29126234608.ipa">Install (main branch URL)</a>
+    <a class="button tertiary" href="sidestore://install?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fhejong2-byte%2Fretro-radiko-ios-install%4011e4558%2FRetroRadiko-29126234608.ipa">Install (jsDelivr mirror)</a>
+    <a class="button secondary" href="https://raw.githubusercontent.com/hejong2-byte/retro-radiko-ios-install/11e45581c759955aeb0967d3d0b2b2967ea9ed35/RetroRadiko-29126234608.ipa">Download IPA (raw)</a>
+    <a class="button secondary" href="https://cdn.jsdelivr.net/gh/hejong2-byte/retro-radiko-ios-install@11e4558/RetroRadiko-29126234608.ipa">Download IPA (jsDelivr)</a>
+
+    <p class="meta">Direct SideStore URL</p>
+    <p><code>sidestore://install?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhejong2-byte%2Fretro-radiko-ios-install%2F11e45581c759955aeb0967d3d0b2b2967ea9ed35%2FRetroRadiko-29126234608.ipa</code></p>
+    <p class="meta">IPA raw URL (HTTP 200 verified)</p>
+    <p><code>https://raw.githubusercontent.com/hejong2-byte/retro-radiko-ios-install/11e45581c759955aeb0967d3d0b2b2967ea9ed35/RetroRadiko-29126234608.ipa</code></p>
   </main>
 </body>
 </html>
