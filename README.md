@@ -1,14 +1,14 @@
 # Radiko HJ iOS Install
 
-Latest build: 29179646913
-Source commit: 04b5b31
-IPA commit: d6a0ae3a23e40cae92e6aa9c1539b5b4db8b7eab
-Generated: 2026-07-12 13:27 +0900
+Latest build: 29374121881
+Source commit: 2cf3263
+IPA commit: cdf69c192fbb1c93b43d8e6590fabd147e9e7ab7
+Generated: 2026-07-15 07:50 +0900
 
-Install page: https://hejong2-byte.github.io/retro-radiko-ios-install/install-29179646913.html
+Install page: https://hejong2-byte.github.io/retro-radiko-ios-install/install-29374121881.html
 
-Direct SideStore: sidestore://install?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhejong2-byte%2Fretro-radiko-ios-install%2Fd6a0ae3a23e40cae92e6aa9c1539b5b4db8b7eab%2FRetroRadiko-29179646913.ipa
+Direct SideStore: sidestore://install?url=https%3A%2F%2Fraw.githubusercontent.com%2Fhejong2-byte%2Fretro-radiko-ios-install%2Fcdf69c192fbb1c93b43d8e6590fabd147e9e7ab7%2FRetroRadiko-29374121881.ipa
 
-Raw IPA: https://raw.githubusercontent.com/hejong2-byte/retro-radiko-ios-install/d6a0ae3a23e40cae92e6aa9c1539b5b4db8b7eab/RetroRadiko-29179646913.ipa
+Raw IPA: https://raw.githubusercontent.com/hejong2-byte/retro-radiko-ios-install/cdf69c192fbb1c93b43d8e6590fabd147e9e7ab7/RetroRadiko-29374121881.ipa
 
-Changes: Disable unsupported HLS EQ, add Bluetooth spatial-permission auto-enable, show system/output status, and add a main-radio spatial toggle.
+Changes: Add reliable iOS 26 system alarms with audible fallback and a real test tone, prevent overlapping alarm audio, move the alarm icon/time 3pt down, and correct LuckyFM to FM 94.6 MHz.
